@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
       end
 
       def check_owner(obj)
-        ob && obj.user == current_user
+        obj && obj.user == current_user
       end
 
     end

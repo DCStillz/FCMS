@@ -53,7 +53,7 @@ class MoviesController < ApplicationController
       movie = Movie.find_by(id: params[:id])
       if check_owner(@movie)
         @movie.delete
-        redirect('/movies')
+        redirect '/movies'
       else
         erb :'movies/show'
       end
