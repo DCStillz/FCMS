@@ -1,0 +1,13 @@
+<h1>Movie</h1>
+
+<p><%= @movie.name %> - <%= @movie.description %> </p>
+<%if check_owner(@movie)%>
+<form action="/movies/<%=@movie.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
+
+<a href="/movies/<%=@movie.id%>/edit">Edit This Movie Idea</a><br>
+<a href="/"
+
+<%end%>
